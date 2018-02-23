@@ -1,0 +1,35 @@
+h1 {
+  border: 2px solid black;
+  padding: 35px;
+  margin: 30px;
+  background-color: #212F3D;
+  text-align: center;
+}
+
+body {
+  background-color: #EC7063;
+}
+
+#test-box {
+  float: left;
+  border: 2px solid black;
+  padding: 45px;
+  margin: 100px;
+  background-color: #808B96;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+em {
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+.container {
+  text-decoration-color: black;
+}
