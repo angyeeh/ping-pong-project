@@ -1,32 +1,33 @@
 $(document).ready(function() {
-  $("form#ping-pong").submit(function(event) {
+  $("#enter form").submit(function(event) {
     event.preventDefault();
-    var interger = parseInt($("input#value").val());
-    var result = pingpong(value);
-    $("#result").text(result);
-  })
-})
-
+    var display = parseInt($("input#ppnumber").val());
+    var result = answer(display);
+    $(".Push").text(result);
+  });
+});
 // business logic
-var pingpong = function(value) {
-  for (var i = 0; i <= 30; i++) {
-    if (i % 3 === 0) {
-      return "Ping";
-    } else if (i % 5 === 0) {
-      return "Pong";
-    } else if (i % 15 === 0) {
-      return "PingPong";
+var answer = function(display) {
+  for (i = 1; i <= display; i++) {
+    // if the number is divisible by 15, write "Ping Pong"
+    if (i % 15 === 0) {
+      console.log("pingpong");
+      $(".Push").append("<li>" + "pingpong" + "</li>");
+      //return "PingPong";
+    }
+    // if the number is divisible by 3, write "Ping"
+    else if (i % 3 === 0) {
+      $(".Push").append("<li>" + "ping" + "</>");
+      //return "Ping";
+    }
+    // otherwise, write "po"
+    else if (i % 5 === 0) {
+      $(".Push").append("<li>" + "pong" + "</>");
+      //return "Pong";
+    } else {
+      console.log("qwert");
+      $(".Push").append("<li>" + i + "</>");
+      //return(i);
     }
   }
-};
-
-// user interface logic
-$(document).ready(function() {
-  $("form#ping-pong").submit(function(event) {
-    event.preventDefault();
-    var year = parseInt($("input#value").val());
-    var result = pingpong(value);
-
-    $("#result").show();
-  })
-})
+}
